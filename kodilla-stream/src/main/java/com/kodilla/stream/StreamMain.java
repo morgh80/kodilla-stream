@@ -1,10 +1,12 @@
 package com.kodilla.stream;
 
 import com.kodilla.stream.beautifier.PoemBeautifier;
+import com.kodilla.stream.iterate.NumbersGenerator;
 import com.kodilla.stream.lambda.Executor;
 import com.kodilla.stream.lambda.ExpressionExecutor;
 import com.kodilla.stream.lambda.Processor;
 import com.kodilla.stream.reference.FunctionalCalculator;
+
 
 public class StreamMain {
     public static void main(String[] args) {
@@ -25,13 +27,15 @@ public class StreamMain {
 //        expressionExecutor.executeExpression(3, 4, FunctionalCalculator::addAToB);
 //        expressionExecutor.executeExpression(3, 4, FunctionalCalculator::subBFromA);
 //        expressionExecutor.executeExpression(3, 4, FunctionalCalculator::divideAByB);
+//
+//        System.out.println("Excersise 7.1");
+//        PoemBeautifier poemBeautifier = new PoemBeautifier();
+//        poemBeautifier.beautify("Some text", "***", (someText, decorator) -> decorator + someText + decorator);
+//        poemBeautifier.beautify("Another text", "", (someText, decorator) -> someText.toUpperCase());
+//        poemBeautifier.beautify("Some another text", "@", ((someText, decorator) -> someText.replaceAll("a", decorator)));
 
-        System.out.println("Excersise 7.1");
-        PoemBeautifier poemBeautifier = new PoemBeautifier();
-        poemBeautifier.beautify("Some text", "***", (someText, decorator) -> decorator + someText + decorator);
-        poemBeautifier.beautify("Another text", "", (someText, decorator) -> someText.toUpperCase());
-        poemBeautifier.beautify("Some another text", "@", ((someText, decorator) -> someText.replaceAll("a", decorator)));
-
+        System.out.println("Using Stream to generate even numbers from 1 to 20");
+        NumbersGenerator.generateEven(20);
 
     }
 
